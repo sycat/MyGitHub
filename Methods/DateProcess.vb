@@ -9,7 +9,7 @@ Public Class DateProcess
     ''' <param name="monthName">Month Name</param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function ConvertMonthNameToNumber(ByVal monthName As String) As String
+    Public Shared Function ConvertMonthNameToNumber(ByVal monthName As String) As Integer
 
         Dim monthNumber As Integer = DateTime.ParseExact(monthName, "MMM", CultureInfo.CreateSpecificCulture("en-US")).Month
 

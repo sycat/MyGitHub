@@ -3,7 +3,7 @@
     Sub Main()
 
         Try
-            FileProcess.ReadData("e:\log\log.txt")
+            Console.WriteLine(DateProcess.ConvertMonthNameToNumber("JAN"))
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try
