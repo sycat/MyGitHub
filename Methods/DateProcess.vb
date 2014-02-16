@@ -17,4 +17,16 @@ Public Class DateProcess
 
     End Function
 
+    Public Shared Function CalculateAge(ByVal birthday As DateTime, ByVal targetDate As DateTime) As Integer
+
+        Dim age As Integer = targetDate.Year - birthday.Year
+
+        If birthday > targetDate.AddYears(-age) Then
+            age = age - 1
+        End If
+
+        Return age
+
+    End Function
+
 End Class
