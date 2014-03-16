@@ -7,9 +7,12 @@ Module Module1
     Sub Main()
 
         Try
-            Dim birthday As DateTime = New DateTime(2012, 2, 29)
-            Dim targetDay As DateTime = New DateTime(2014, 2, 28)
-            Console.WriteLine(DateProcess.CalculateAge(birthday, targetDay).ToString())
+            Dim date1 As DateTime = Date.Now.Date
+            Dim date2 As DateTime = DateTime.Parse("16MAR14", System.Globalization.CultureInfo.InvariantCulture)
+            Console.WriteLine(Date.Now.ToString())
+
+
+            Console.WriteLine("fin")
 
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
