@@ -15,12 +15,25 @@ Module Module1
                     <phone type="work">425-555-0145</phone>
                 </contact>
 
-            Dim xdocument As XDocument = xdocument.Load("..\..\Test.xml")
-            Dim employees As IEnumerable(Of XElement) = contactDoc.Elements()
+            Dim xd As XElement = XElement.Load("..\..\Test.xml")
+            Dim employees As IEnumerable(Of XElement) =
+                From el In xd.<Items>.<Item>
+                Where el.<USPrice>.Value = "39.98"
+                Select el
             ' Read the entire XML
-            For Each employee In employees
-                Console.WriteLine(employee)
+            For Each employee As XElement In employees
+
+                Console.WriteLine(employee.Element("ProductName").Value)
             Next
+
+            'Dim root As XElement = XElement.Load("..\..\Test.xml")
+            'Dim address As IEnumerable(Of XElement) = _
+            '    From el In root.<Address> _
+            '    Where el.@Type = "Billing" _
+            '    Select el
+            'For Each el As XElement In address
+            '    Console.WriteLine(el)
+            'Next
 
 
 

@@ -1,59 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Employees>
-  <Employee>
-    <EmpId>1</EmpId>
-    <Name>Sam</Name>
-    <Sex>Male</Sex>
-    <Phone Type="Home">423-555-0124</Phone>
-    <Phone Type="Work">424-555-0545</Phone>
-    <Address>
-      <Street>7A Cox Street</Street>
-      <City>Acampo</City>
-      <State>CA</State>
-      <Zip>95220</Zip>
-      <Country>USA</Country>
-    </Address>
-  </Employee>
-  <Employee>
-    <EmpId>2</EmpId>
-    <Name>Lucy</Name>
-    <Sex>Female</Sex>
-    <Phone Type="Home">143-555-0763</Phone>
-    <Phone Type="Work">434-555-0567</Phone>
-    <Address>
-      <Street>Jess Bay</Street>
-      <City>Alta</City>
-      <State>CA</State>
-      <Zip>95701</Zip>
-      <Country>USA</Country>
-    </Address>
-  </Employee>
-  <Employee>
-    <EmpId>3</EmpId>
-    <Name>Kate</Name>
-    <Sex>Female</Sex>
-    <Phone Type="Home">166-555-0231</Phone>
-    <Phone Type="Work">233-555-0442</Phone>
-    <Address>
-      <Street>23 Boxen Street</Street>
-      <City>Milford</City>
-      <State>CA</State>
-      <Zip>96121</Zip>
-      <Country>USA</Country>
-    </Address>
-  </Employee>
-  <Employee>
-    <EmpId>4</EmpId>
-    <Name>Chris</Name>
-    <Sex>Male</Sex>
-    <Phone Type="Home">564-555-0122</Phone>
-    <Phone Type="Work">442-555-0154</Phone>
-    <Address>
-      <Street>124 Kutbay</Street>
-      <City>Montara</City>
-      <State>CA</State>
-      <Zip>94037</Zip>
-      <Country>USA</Country>
-    </Address>
-  </Employee>
-</Employees>
+<PurchaseOrder PurchaseOrderNumber="99503" OrderDate="1999-10-20">
+  <Address Type="Shipping">
+    <Name>Ellen Adams</Name>
+    <Street>123 Maple Street</Street>
+    <City>Mill Valley</City>
+    <State>CA</State>
+    <Zip>10999</Zip>
+    <Country>USA</Country>
+  </Address>
+  <Address Type="Billing">
+    <Name>Tai Yee</Name>
+    <Street>8 Oak Avenue</Street>
+    <City>Old Town</City>
+    <State>PA</State>
+    <Zip>95819</Zip>
+    <Country>USA</Country>
+  </Address>
+  <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>
+  <Items>
+    <Item PartNumber="872-AA">
+      <ProductName>Lawnmower</ProductName>
+      <Quantity>1</Quantity>
+      <USPrice>148.95</USPrice>
+      <Comment>Confirm this is electric</Comment>
+    </Item>
+    <Item PartNumber="926-AA">
+      <ProductName>Baby Monitor</ProductName>
+      <Quantity>2</Quantity>
+      <USPrice>39.98</USPrice>
+      <ShipDate>1999-05-21</ShipDate>
+    </Item>
+  </Items>
+</PurchaseOrder>
