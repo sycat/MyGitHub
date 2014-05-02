@@ -2,7 +2,7 @@
 
 Public Class OracleDBProcess
 
-    Private Const connectString As String = "Data Source=XE;User Id=user;Password=pwd;"
+    Private Const connectString As String = "Data Source=XE;User Id=ED39298;Password=asd39298;"
 
     Public Shared Function ExecuteScalar(ByVal cmd As OracleCommand) As String
         Dim result As String = String.Empty
@@ -73,5 +73,18 @@ Public Class OracleDBProcess
         Return result
     End Function
 
+    Public Shared Function UpdateWithParamName(ByVal cmd As OracleCommand) As Integer
+        Dim count As Integer = 0
+
+        Using connection As OracleConnection = New OracleConnection(connectString)
+            connection.Open()
+            cmd.BindByName = True
+            cmd.Connection = connection
+            count = cmd.ExecuteNonQuery()
+        End Using
+
+        Return count
+
+    End Function
 
 End Class
