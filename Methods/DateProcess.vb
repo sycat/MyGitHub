@@ -29,4 +29,25 @@ Public Class DateProcess
 
     End Function
 
+    Public Shared Function ConvertSpecialFormat(ByVal dateString As String) As DateTime
+        Dim formatDateTime As DateTime
+        Dim formatList() As String = {
+            "yyyyMMdd HHmmss",
+            "yyyyMMdd tt hhmmss",
+            "yyyy/M/d tt hh:mm:ss",
+            "yyyy/MM/dd tt hh:mm:ss",
+            "yyyy/MM/dd HH:mm:ss",
+            "yyyy/M/d HH:mm:ss",
+            "yyyy/M/d",
+            "yyyy/MM/dd"
+        }
+
+        formatDateTime = DateTime.ParseExact(dateString,
+                                             formatList,
+                                             CultureInfo.InvariantCulture,
+                                             DateTimeStyles.AllowWhiteSpaces)
+
+        Return formatDateTime
+    End Function
+
 End Class
