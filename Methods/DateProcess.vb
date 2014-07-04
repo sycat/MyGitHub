@@ -29,7 +29,7 @@ Public Class DateProcess
 
     End Function
 
-    Public Shared Function ConvertSpecialFormat(ByVal dateString As String) As DateTime
+    Public Shared Function RevertSpecialFormat(ByVal dateString As String) As DateTime
         Dim formatDateTime As DateTime
         Dim formatList() As String = {
             "yyyyMMdd HHmmss",
@@ -48,6 +48,19 @@ Public Class DateProcess
                                              DateTimeStyles.AllowWhiteSpaces)
 
         Return formatDateTime
+    End Function
+
+    Public Shared Function TryRevertSpecialFormat(ByVal dateString As String, ByRef specialDate As DateTime) As Boolean
+        Dim revertResult As Boolean = False
+
+        Try
+            specialDate = RevertSpecialFormat(dateString)
+            revertResult = True
+        Catch ex As Exception
+            revertResult = False
+        End Try
+
+        Return revertResult
     End Function
 
 End Class

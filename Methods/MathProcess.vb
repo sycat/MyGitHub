@@ -28,6 +28,11 @@ Public Class MathProcess
                 Exit For
             End If
 
+            If Integer.Parse(curr(i)) > Integer.Parse(newestAppVer(i)) Then
+                result = True
+                Exit For
+            End If
+
             If i = newestAppVer.Length - 1 Then
                 result = True
             End If
