@@ -2,7 +2,7 @@
 
 Public Class OracleDBProcess
 
-    Private Const connectString As String = "Data Source=XE;User Id=user;Password=pwd;"
+    Private Const connectString As String = "Data Source=XE;User Id=ED39298;Password=asd39298;"
 
     Public Shared Function ExecNonQuery(ByVal cmd As OracleCommand) As Integer
         Dim count As Integer = 0

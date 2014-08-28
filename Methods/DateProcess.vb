@@ -39,7 +39,9 @@ Public Class DateProcess
             "yyyy/MM/dd HH:mm:ss",
             "yyyy/M/d HH:mm:ss",
             "yyyy/M/d",
-            "yyyy/MM/dd"
+            "yyyy/MM/dd",
+            "ddMMMyy",
+            "ddMMMyy HHmm"
         }
 
         formatDateTime = DateTime.ParseExact(dateString,
